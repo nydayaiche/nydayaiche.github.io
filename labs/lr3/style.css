@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  color: #202a34;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.site-header,
+.site-footer {
+  width: 100%;
+  background-color: #a9c6e2;
+}
+
+.header-inner,
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+}
+
+#logo {
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.site-brand h1 {
+  margin: 0;
+}
+
+.site-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 10px;
+  border-top: 1px solid #8baecd;
+}
+
+.section {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  margin-top: 12px;
+  padding: 12px 10px;
+  background-color: #e8f1f9;
+}
+
+#table {
+  order: -1;
+}
+
+.site-footer {
+  margin-top: 12px;
+}
+
+.site-footer .container {
+  padding: 12px 10px;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+#links ul,
+#links ol {
+  padding-left: 22px;
+}
+
+#links li {
+  margin-bottom: 5px;
+}
+
+#links img {
+  vertical-align: middle;
+}
+
+#links li:has(img) {
+  overflow-x: auto;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.language-table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+}
+
+.language-table caption {
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.language-table th,
+.language-table td {
+  border: 1px solid #4f6375;
+  padding: 6px;
+  text-align: left;
+}
+
+.language-table thead {
+  background-color: #a9c6e2;
+}
+
+.language-table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.language-table tbody tr:nth-child(even) {
+  background-color: #d5e5f3;
+}
+
+#form input,
+#form textarea,
+#form select,
+#form fieldset {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 12px 10px;
+  }
+
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px 18px;
+  }
+
+  .site-brand {
+    gap: 18px;
+    padding: 0;
+  }
+
+  .site-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: auto;
+    margin-left: auto;
+    padding: 0;
+    border-top: 0;
+  }
+
+  .section {
+    max-width: 720px;
+    margin: 16px auto;
+    padding: 12px;
+  }
+
+  #table {
+    order: 0;
+  }
+
+  .site-footer {
+    margin-top: 0;
+  }
+}

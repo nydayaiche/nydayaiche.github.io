@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  color: #202a34;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px 10px;
+}
+
+.site-header,
+.site-footer {
+  background-color: #a9c6e2;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+}
+
+#logo {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-inner h1 {
+  margin: 0;
+}
+
+.site-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.section {
+  box-sizing: border-box;
+  max-width: 720px;
+  margin: 16px auto;
+  padding: 12px;
+  background-color: #e8f1f9;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+#links ul,
+#links ol {
+  padding-left: 22px;
+}
+
+#links li {
+  margin-bottom: 5px;
+}
+
+#links img {
+  vertical-align: middle;
+}
+
+#links li:has(img) {
+  overflow-x: auto;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.language-table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+}
+
+.language-table caption {
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.language-table th,
+.language-table td {
+  border: 1px solid #4f6375;
+  padding: 6px;
+  text-align: left;
+}
+
+.language-table thead {
+  background-color: #a9c6e2;
+}
+
+.language-table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.language-table tbody tr:nth-child(even) {
+  background-color: #d5e5f3;
+}
+
+#form input,
+#form textarea,
+#form select,
+#form fieldset {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+}

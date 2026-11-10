@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЛР4. Учебный сайт</title>
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container-md site-width px-0">
+      <div class="row no-gutters align-items-md-center">
+        <div class="col-12 col-md-8 d-flex align-items-center px-2 py-3">
+          <img id="logo" class="rounded-circle flex-shrink-0 mr-3" src="image.jpg" width="80" height="80" alt="Логотип: цветок">
+          <h1 class="h2 mb-0">Учебный сайт</h1>
+        </div>
+        <nav class="col-12 col-md-4 d-flex flex-column flex-md-row justify-content-md-end px-2 py-2" aria-label="Разделы страницы">
+          <a class="my-1 my-md-0 ml-md-3" href="#links">Ссылки</a>
+          <a class="my-1 my-md-0 ml-md-3" href="#table">Таблица</a>
+          <a class="my-1 my-md-0 ml-md-3" href="#form">Форма</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-md site-width px-0">
+    <div class="row no-gutters justify-content-center">
+      <section id="links" class="section col-12 col-md-9 mt-2 mt-md-3 p-2 p-md-3">
+        <h2>Список гиперссылок</h2>
+        <ul class="pl-4 mb-0">
+          <li><a href="http://kubsu.ru/">Главная страница КубГУ по HTTP</a></li>
+          <li><a href="https://kubsu.ru/">Главная страница КубГУ по HTTPS</a></li>
+          <li>
+            <a href="https://kubsu.ru/">
+              <img src="image.jpg" width="250" alt="Цветок. Перейти на сайт КубГУ">
+            </a>
+          </li>
+          <li><a href="/labs/lr4/about/">Сокращённая ссылка на страницу о работе</a></li>
+          <li><a href="/">Сокращённая ссылка на главную страницу</a></li>
+          <li><a href="#form">Перейти к форме</a></li>
+          <li><a href="/?course=web&amp;lab=4&amp;view=full">Ссылка с тремя параметрами</a></li>
+          <li><a href="/?id=17">Ссылка с параметром id</a></li>
+          <li><a href="./demo.html">Страница в текущем каталоге</a></li>
+          <li><a href="./about/index.html">Страница в каталоге about</a></li>
+          <li><a href="../index.html">Страница на уровень выше</a></li>
+          <li><a href="../../index.html">Страница на два уровня выше</a></li>
+          <li><p>Сведения об университете доступны на <a href="https://kubsu.ru/">сайте КубГУ</a>.</p></li>
+          <li><a href="https://html.spec.whatwg.org/multipage/links.html#links">Раздел о ссылках в стандарте HTML</a></li>
+          <li>
+            <img src="image.jpg" width="250" alt="Цветок с двумя активными областями" usemap="#flower">
+            <map name="flower">
+              <area shape="rect" coords="10,10,105,75" href="https://kubsu.ru/" alt="Сайт КубГУ">
+              <area shape="circle" coords="180,65,35" href="#form" alt="Форма анкеты">
+            </map>
+          </li>
+          <li><a href="">Ссылка с пустым href</a></li>
+          <li><a>Элемент a без href</a></li>
+          <li><a href="https://example.com/" rel="nofollow">Ссылка с nofollow</a></li>
+          <li><!--noindex--><a href="https://example.com/">Ссылка внутри блока noindex</a><!--/noindex--></li>
+          <li>
+            Нумерованный список ссылок с title
+            <ol class="pl-4 mb-0">
+              <li><a href="https://kubsu.ru/" title="Официальный сайт Кубанского государственного университета">КубГУ</a></li>
+              <li><a href="./about/index.html" title="Описание лабораторной работы № 4">О работе</a></li>
+            </ol>
+          </li>
+          <li><a href="ftp://ftp.example.org/course/task.txt" title="Для доступа нужен логин и пароль">Учебный пример ссылки на FTP-файл с авторизацией</a></li>
+        </ul>
+
+      </section>
+
+      <section id="table" class="section col-12 col-md-9 order-first order-md-0 mt-2 mt-md-3 p-2 p-md-3">
+        <h2>Таблица</h2>
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered table-striped mb-0 language-table">
+            <caption class="pt-0 pb-2">Языки программирования и их применение</caption>
+            <thead>
+              <tr><th scope="col">Область</th><th scope="col">Язык</th><th scope="col">Пример задачи</th><th scope="col">Расширение</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="rowgroup" rowspan="2">Веб</th><td>JavaScript</td><td>Интерактивная страница</td><td>.js</td></tr>
+              <tr><td>PHP</td><td>Обработка формы на сервере</td><td>.php</td></tr>
+            </tbody>
+            <tbody>
+              <tr><th scope="rowgroup" rowspan="2">Системы</th><td>C</td><td>Драйвер устройства</td><td>.c</td></tr>
+              <tr><td>C++</td><td>Движок игры</td><td>.cpp</td></tr>
+            </tbody>
+            <tbody>
+              <tr><th scope="rowgroup" rowspan="2">Данные</th><td>Python</td><td>Обработка таблиц</td><td>.py</td></tr>
+              <tr><td>Scala</td><td>Обработка данных в Spark</td><td>.scala</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="form" class="section col-12 col-md-9 mt-2 mt-md-3 p-2 p-md-3">
+        <h2>Форма</h2>
+        <form>
+          <p><label>ФИО<br><input type="text" name="fio" autocomplete="name" required></label></p>
+          <p><label>Телефон<br><input type="tel" name="phone" autocomplete="tel" placeholder="+79991234567" pattern="\+?[0-9]{10,15}" title="От 10 до 15 цифр, в начале можно поставить +" required></label></p>
+          <p><label>E-mail<br><input type="email" name="email" autocomplete="email" placeholder="@mail.ru" required></label></p>
+          <p><label>Дата рождения<br><input type="date" name="birth-date" autocomplete="bday" required></label></p>
+          <fieldset>
+            <legend>Пол</legend>
+            <label><input type="radio" name="gender" value="male" required> Мужской</label>
+            <label><input type="radio" name="gender" value="female"> Женский</label>
+          </fieldset>
+          <p>
+            <label>
+              Любимый язык программирования<br>
+              <select name="languages" multiple size="6" required>
+                <option>Pascal</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>JavaScript</option>
+                <option>PHP</option>
+                <option>Python</option>
+                <option>Java</option>
+                <option>Haskell</option>
+                <option>Clojure</option>
+                <option>Prolog</option>
+                <option>Scala</option>
+              </select>
+            </label>
+          </p>
+          <p><label>Биография<br><textarea name="biography" rows="4" required></textarea></label></p>
+          <p><label><input type="checkbox" name="contract" required> С контрактом ознакомлен(а)</label></p>
+          <button type="submit">Сохранить</button>
+          <output id="result"></output>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer mt-2 mt-md-3">
+    <div class="container-md site-width px-2 py-3">© Г. В. Коновалов</div>
+  </footer>
+  <script>
+    document.querySelector('form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      document.getElementById('result').textContent =
+        ' Форма заполнена. Данные не отправлены.';
+    });
+  </script>
+</body>
+</html>

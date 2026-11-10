@@ -1,0 +1,54 @@
+body {
+  font-family: Georgia, serif;
+  color: #202a34;
+}
+
+.site-header,
+.site-footer {
+  background-color: #a9c6e2;
+}
+
+.site-header a,
+main a {
+  color: #174b7e;
+  text-decoration: underline;
+}
+
+#logo {
+  object-fit: cover;
+}
+
+.section {
+  min-width: 0;
+  background-color: #e8f1f9;
+}
+
+#links li:has(img) {
+  overflow-x: auto;
+}
+
+.language-table {
+  min-width: 420px;
+  background-color: #fff;
+}
+
+.language-table caption {
+  caption-side: top;
+  color: inherit;
+}
+
+.language-table thead {
+  background-color: #a9c6e2;
+}
+
+#form input,
+#form textarea,
+#form select {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .site-width {
+    max-width: 960px;
+  }
+}
