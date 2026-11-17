@@ -107,14 +107,17 @@ main {
   text-align: center;
 }
 
-#pager,
-.image-credits {
+#pager {
   margin: 12px 8px 0;
   text-align: center;
 }
 
-.image-credits a {
+.gallery-track figcaption a {
   color: #174b7e;
+}
+
+.gallery-track li[aria-hidden="true"] a {
+  visibility: hidden;
 }
 
 @media (min-width: 600px) {
