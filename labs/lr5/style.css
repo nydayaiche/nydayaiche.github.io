@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #202a34;
+}
+
+.site-header,
+.site-footer {
+  background-color: #a9c6e2;
+}
+
+.site-width {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  max-width: 640px;
+  margin: 16px auto;
+  padding: 0 8px;
+}
+
+.calculator {
+  padding: 16px;
+  background-color: #e8f1f9;
+}
+
+.calculator h2 {
+  margin-top: 0;
+}
+
+#order-form {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+}
+
+input,
+select,
+button {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 6px 8px;
+  font: inherit;
+}
+
+input,
+select {
+  width: 250px;
+}
+
+button {
+  margin-top: 4px;
+}
+
+#result {
+  display: block;
+  min-height: 1.2em;
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+}
+
+input[aria-invalid="true"] {
+  outline: 2px solid #9b2020;
+}
+
+.footer-content a {
+  color: #174b7e;
+}
+
+.footer-content p {
+  margin: 8px 0 0;
+}

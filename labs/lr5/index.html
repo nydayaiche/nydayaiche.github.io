@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЛР5. Калькулятор стоимости заказа</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-width header-content">
+      <img class="logo" src="image.jpg" width="80" height="80" alt="">
+      <h1>Учебный сайт</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="calculator">
+      <h2>Калькулятор стоимости заказа</h2>
+      <form id="order-form">
+        <label for="quantity">Количество товара</label>
+        <input id="quantity" name="quantity" type="text" inputmode="numeric" value="1">
+
+        <label for="product">Товар</label>
+        <select id="product" name="product">
+          <option value="35">Карандаш, 35 руб.</option>
+          <option value="90">Маркер, 90 руб.</option>
+          <option value="160">Блокнот, 160 руб.</option>
+        </select>
+
+        <button type="submit">Рассчитать</button>
+      </form>
+
+      <output id="result" for="quantity product" aria-live="polite"></output>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-width footer-content">
+      <a href="../index.html">К списку лабораторных</a>
+      <p>Г. В. Коновалов</p>
+    </div>
+  </footer>
+</body>
+</html>
