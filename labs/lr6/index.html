@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЛР6. Калькулятор стоимости услуги</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-width header-content">
+      <img class="logo" src="image.jpg" width="80" height="80" alt="">
+      <h1>Учебный сайт</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="calculator">
+      <h2>Калькулятор стоимости услуги</h2>
+      <form id="order-form">
+        <label for="quantity">Количество экземпляров</label>
+        <input id="quantity" name="quantity" type="text" inputmode="numeric" value="1">
+
+        <fieldset>
+          <legend>Тип услуги</legend>
+          <label class="choice">
+            <input id="black-print" name="service" type="radio" value="black" data-price="8" checked>
+            Чёрно-белая печать, 8 руб./экз.
+          </label>
+          <label class="choice">
+            <input id="color-print" name="service" type="radio" value="color" data-price="25">
+            Цветная печать, 25 руб./экз.
+          </label>
+          <label class="choice">
+            <input id="binding" name="service" type="radio" value="binding" data-price="120">
+            Переплёт, 120 руб./экз.
+          </label>
+        </fieldset>
+
+        <div id="paper-group" class="option-group" hidden>
+          <label for="paper">Бумага для цветной печати</label>
+          <select id="paper" name="paper" disabled>
+            <option value="0">Обычная, без доплаты</option>
+            <option value="12">Плотная, +12 руб./экз.</option>
+            <option value="20">Глянцевая, +20 руб./экз.</option>
+          </select>
+        </div>
+
+        <div id="cover-group" hidden>
+          <label class="choice">
+            <input id="cover" name="cover" type="checkbox" data-price="60" disabled>
+            Твёрдая обложка, +60 руб./экз.
+          </label>
+        </div>
+      </form>
+
+      <output id="result" for="quantity black-print color-print binding paper cover" aria-live="polite"></output>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-width footer-content">
+      <a href="../index.html">К списку лабораторных</a>
+      <p>Г. В. Коновалов</p>
+    </div>
+  </footer>
+</body>
+</html>
