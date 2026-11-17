@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЛР7. Галерея изображений</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-width">
+      <h1>Учебный сайт</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Планеты Солнечной системы</h2>
+      <div class="gallery-controls">
+        <button id="previous" type="button" aria-label="Предыдущая страница" aria-controls="gallery-track" aria-disabled="true">
+          <span aria-hidden="true">←</span>
+        </button>
+        <div class="gallery-viewport">
+          <ul id="gallery-track" class="gallery-track">
+            <li>
+              <figure>
+                <img src="images/mercury.jpg" alt="Каменистая поверхность с кратерами">
+                <figcaption>Меркурий</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/venus.jpg" alt="Густые светлые облака">
+                <figcaption>Венера</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/earth.jpg" alt="Африка и Индийский океан под белыми облаками">
+                <figcaption>Земля</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/mars.jpg" alt="Красноватая поверхность и тёмные каньоны">
+                <figcaption>Марс</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/jupiter.jpg" alt="Облака Юпитера и Большое красное пятно">
+                <figcaption>Юпитер</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/saturn.jpg" alt="Золотистая планета с кольцами">
+                <figcaption>Сатурн</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/uranus.jpg" alt="Бледно-голубой диск на чёрном фоне">
+                <figcaption>Уран</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/neptune.jpg" alt="Голубая планета с полосами облаков">
+                <figcaption>Нептун</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+        <button id="next" type="button" aria-label="Следующая страница" aria-controls="gallery-track">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+      <p id="pager" role="status"></p>
+      <p class="image-credits">
+        <a href="https://science.nasa.gov/solar-system/planets/">Снимки NASA</a>.
+        <a href="https://science.nasa.gov/photojournal/jupiter-marble/">Юпитер</a>:
+        Kevin M. Gill (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>),
+        NASA/JPL-Caltech/SwRI/MSSS.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-width footer-content">
+      <a href="../index.html">К списку лабораторных</a>
+      <p>Г. В. Коновалов</p>
+    </div>
+  </footer>
+</body>
+</html>

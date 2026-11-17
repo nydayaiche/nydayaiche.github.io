@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #202a34;
+}
+
+.site-header,
+.site-footer {
+  background-color: #a9c6e2;
+}
+
+.site-width {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 16px auto;
+  padding: 0 8px;
+}
+
+.gallery {
+  padding: 16px 8px;
+  background-color: #e8f1f9;
+}
+
+.gallery h2 {
+  margin: 0 8px 16px;
+}
+
+.gallery-controls {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 4px;
+}
+
+.gallery-controls button {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #174b7e;
+  border-radius: 4px;
+  background-color: #a9c6e2;
+  color: #174b7e;
+  font: 1.5rem/1 Georgia, serif;
+  cursor: pointer;
+}
+
+.gallery-controls button:hover {
+  background-color: #c6dbed;
+}
+
+.gallery-controls button[aria-disabled="true"] {
+  border-color: #829ab1;
+  background-color: #e8f1f9;
+  color: #526378;
+  cursor: default;
+}
+
+.gallery-controls button:focus-visible {
+  outline: 2px solid #174b7e;
+  outline-offset: 2px;
+}
+
+.gallery-viewport {
+  overflow: hidden;
+}
+
+.gallery-track {
+  --visible-slides: 1;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: transform 260ms ease;
+}
+
+.gallery-track li {
+  box-sizing: border-box;
+  flex: 0 0 calc(100% / var(--visible-slides));
+  min-width: 0;
+  padding: 0 4px;
+}
+
+.gallery-track figure {
+  margin: 0;
+}
+
+.gallery-track img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background-color: #000;
+}
+
+.gallery-track figcaption {
+  margin-top: 6px;
+  text-align: center;
+}
+
+#pager,
+.image-credits {
+  margin: 12px 8px 0;
+  text-align: center;
+}
+
+.image-credits a {
+  color: #174b7e;
+}
+
+@media (min-width: 600px) {
+  .gallery-track {
+    --visible-slides: 3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track {
+    transition: none;
+  }
+}
+
+.footer-content a {
+  color: #174b7e;
+}
+
+.footer-content p {
+  margin: 8px 0 0;
+}
