@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  color: #202a34;
+  font-family: Georgia, serif;
+}
+
+.site-header,
+.site-footer {
+  background: #a9c6e2;
+}
+
+.site-width {
+  box-sizing: border-box;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.contact,
+#feedback-dialog {
+  padding: 16px;
+  background: #e8f1f9;
+}
+
+.contact h2 {
+  margin: 0 0 12px;
+}
+
+a {
+  color: #174b7e;
+}
+
+.footer-content p {
+  margin: 8px 0 0;
+}
+
+button {
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid #174b7e;
+  border-radius: 4px;
+  background: #a9c6e2;
+  color: #15324e;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+#feedback-dialog {
+  box-sizing: border-box;
+  width: min(540px, calc(100% - 16px));
+  max-height: calc(100dvh - 16px);
+  margin: auto;
+  padding: 12px;
+  border: 1px solid #829ab1;
+  border-radius: 6px;
+  color: inherit;
+}
+
+#feedback-dialog::backdrop {
+  background: rgb(20 32 44 / 55%);
+}
+
+.dialog-header,
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dialog-header {
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.dialog-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+#close-feedback {
+  min-width: 36px;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+#feedback-fields {
+  display: grid;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  gap: 6px 12px;
+}
+
+#feedback-fields > label {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+#feedback-fields input:not([type="checkbox"]),
+#feedback-fields textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 5px 7px;
+  border: 1px solid #829ab1;
+  border-radius: 4px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+#feedback-fields textarea {
+  resize: vertical;
+}
+
+.consent {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.consent input {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.form-actions {
+  flex-wrap: wrap;
+}
+
+#feedback-status {
+  margin: 0;
+  line-height: 1.2;
+}
+
+#feedback-status:not(:empty) {
+  margin-top: 6px;
+}
+
+#feedback-status[data-state="error"] {
+  color: #862424;
+}
+
+#feedback-status[data-state="success"] {
+  color: #1e5838;
+}
+
+@media (min-width: 470px), (max-height: 520px) and (min-width: 320px) {
+  #feedback-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .full-row {
+    grid-column: 1 / -1;
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЛР8. Форма обратной связи</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-width">
+      <h1>Учебный сайт</h1>
+    </div>
+  </header>
+
+  <main class="site-width">
+    <section class="contact">
+      <h2>Обратная связь</h2>
+      <button type="button" id="open-feedback" aria-haspopup="dialog">Написать нам</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-width footer-content">
+      <a href="../index.html">К списку лабораторных</a>
+      <p>Г. В. Коновалов</p>
+    </div>
+  </footer>
+
+  <dialog id="feedback-dialog" aria-labelledby="feedback-title">
+    <header class="dialog-header">
+      <h2 id="feedback-title">Форма обратной связи</h2>
+      <button id="close-feedback" type="button" aria-label="Закрыть форму">×</button>
+    </header>
+
+    <form id="feedback-form" method="post" data-endpoint="https://formcarry.com/s/DS1ha-imFma">
+      <fieldset id="feedback-fields" aria-label="Данные для обратной связи">
+        <label>
+          ФИО
+          <input name="name" autocomplete="name" required>
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" autocomplete="email" required>
+        </label>
+        <label>
+          Телефон
+          <input name="phone" type="tel" autocomplete="tel" required>
+        </label>
+        <label>
+          Организация
+          <input name="organization" autocomplete="organization">
+        </label>
+        <label class="full-row">
+          Сообщение
+          <textarea name="message" rows="2" required></textarea>
+        </label>
+        <div class="consent full-row">
+          <input id="feedback-consent" name="consent" type="checkbox" value="yes" required>
+          <label for="feedback-consent">Согласен с политикой обработки персональных данных</label>
+        </div>
+        <div class="form-actions full-row">
+          <button type="submit">Отправить</button>
+          <a href="https://formcarry.com/privacy" target="_blank" rel="noopener">Политика Formcarry</a>
+        </div>
+      </fieldset>
+      <p id="feedback-status" role="status"></p>
+    </form>
+  </dialog>
+</body>
+</html>
