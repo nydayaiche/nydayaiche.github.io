@@ -29,6 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
         track.style.transform = "translateX(" + shift + "%)";
         slides.forEach(function (slide, index) {
             const hidden = index < firstSlide || index >= firstSlide + count;
+            slide.inert = hidden;
             slide.setAttribute("aria-hidden", String(hidden));
         });
 

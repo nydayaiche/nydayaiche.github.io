@@ -112,12 +112,13 @@ main {
   text-align: center;
 }
 
-.gallery-track figcaption a {
-  color: #174b7e;
+.gallery-track figure a {
+  display: block;
 }
 
-.gallery-track li[aria-hidden="true"] a {
-  visibility: hidden;
+.gallery-track figure a:focus-visible {
+  outline: 2px solid #174b7e;
+  outline-offset: 1px;
 }
 
 @media (min-width: 600px) {
